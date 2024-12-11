@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^cv$ /assets/Dadakhanov%20Okiljon%20-%20resume.pdf [L,R=301]

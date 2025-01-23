@@ -246,6 +246,24 @@ body {
   flex-direction: column;
 }
 
+.bannerly {
+  display: flex; /* Enables flexbox */
+  justify-content: center;
+  height: 100vh;
+}
+.sumz {
+  display: flex; /* Enables flexbox */
+  justify-content: center;
+  height: 100vh;
+}
+.banner {
+  max-width: 100%; /* Prevents the image from exceeding the container's width */
+  height: auto; /* Maintains aspect ratio */
+}
+.uzinfo {
+  width: 70%;
+}
+
 .text {
   font-weight: var(--weight, --fw-medium);
   font-size: var(--fontSize, --fs-normal);
@@ -835,9 +853,36 @@ main {
     padding: var(--space-lg) 0;
   }
 
-  .recent-work--reverse {
+  /* .recent-work--reverse {
     flex-direction: row-reverse;
     padding-right: 6.25rem;
+  } */
+
+  .recent-work--reverse {
+    display: flex;
+    flex-direction: row-reverse; /* Reverses the order of children */
+    justify-content: space-between;
+    padding: var(--space-lg) 0;
+  }
+
+  .recent-work--reverse > div {
+    width: 30rem; /* Adjust as necessary */
+    margin: 0 auto;
+  }
+
+  .recent-work img {
+    object-fit: contain;
+  }
+
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 
   .other-work,
@@ -850,10 +895,10 @@ main {
     margin: 0 auto;
   }
 
-  .recent-work--reverse > div {
+  /* .recent-work--reverse > div {
     width: 35rem;
     margin-left: 0;
-  }
+  } */
 
   .recent-work img {
     object-fit: contain;

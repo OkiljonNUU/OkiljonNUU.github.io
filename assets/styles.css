@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'Poppins';
   font-weight: 300;
@@ -133,6 +134,10 @@ li[class] {
 img {
   max-width: 100%;
   display: block;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 input,

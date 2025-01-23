@@ -6,10 +6,9 @@
 
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
 }
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .layer,
 aside {
@@ -156,7 +155,6 @@ ul[class] {
 img {
   max-width: 100%;
   display: block;
-  border: 1px solid red;
 }
 
 button,

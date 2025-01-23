@@ -4,6 +4,9 @@
   --weight: var(--fw-bold)
 }
 
+html {
+  scroll-behavior: smooth;
+}
 .layer,
 aside {
   right: 0;

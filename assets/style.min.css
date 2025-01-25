@@ -154,6 +154,7 @@ ul[class] {
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -262,6 +263,27 @@ body {
 }
 .uzinfo {
   width: 70%;
+}
+.banner img,
+.sumz img {
+  width: 100%; /* Ensures full width in flex containers */
+  height: auto; /* Maintains aspect ratio */
+}
+
+.uzinfo img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto; /* Centers the image */
+  display: block;
+}
+
+/* If specific scaling is needed for different devices */
+@media (max-width: 768px) {
+  .banner img,
+  .sumz img {
+    max-width: 100%; /* Adapts for smaller screens */
+    margin: 0 auto; /* Centers if needed */
+  }
 }
 
 .text {

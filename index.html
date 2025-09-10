@@ -1,49 +1,63 @@
+```
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./assets/style.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="16x16"
-      href="/assets/favicon.ico" />
-    <title>Akilhan - Middle Front end developer</title>
-    <meta name="description"
-      content="Okiljon Dadakhanov is a web application developer from Tashkent, Uzbekistan & gaining professional experience of transforming ideas into products." />
-    <meta property="og:title"
-      content="Okiljon Dadakhanov - Frontend Mobile & Web Developer" />
-    <meta property="og:description"
-      content="Okiljon Dadakhanov is a web application developer from Tashkent, Uzbekistan & gaining professional experience of transforming ideas into products." />
-    <meta property="og:image"
-      content="https://ik.imagekit.io/imashish/habitual-ecommerce/portal/logo.png" />
-    <meta property="og:description"
-      content="Okiljon Dadakhanov is a web application developer from Tashkent, Uzbekistan & gaining professional experience of transforming ideas into products." />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.ico" />
+
+    <title>Okiljon Dadakhonov — Junior Software Engineer (Backend · LLM)</title>
+    <meta
+      name="description"
+      content="Okiljon Dadakhonov — Junior software engineer focused on backend (Node.js/TypeScript, Python/FastAPI) and LLM-powered features. Builder of Gradabroad.net university admin platform."
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Okiljon Dadakhonov — Junior Software Engineer (Backend · LLM)" />
+    <meta
+      property="og:description"
+      content="Backend-first developer (Node.js/TypeScript, Python/FastAPI) with real projects: Gradabroad.net university admin platform and an AI article summarizer."
+    />
+    <meta
+      property="og:image"
+      content="https://ik.imagekit.io/imashish/habitual-ecommerce/portal/logo.png"
+    />
     <meta property="og:url" content="http://akilhan.uz/" />
-<script defer src="https://cloud.umami.is/script.js" data-website-id="536082bd-7bb4-4105-ab07-6c9d9ec6e7c1"></script>
-    <script async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-949043903"></script>
+
+    <!-- Analytics -->
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="536082bd-7bb4-4105-ab07-6c9d9ec6e7c1"
+    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-949043903"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "AW-949043903");
+    </script>
 
-    gtag("config", "AW-949043903");
-
-  </script>
+    <!-- JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Okiljon Dadakhanov",
-        "jobTitle": "Frontend Web Developer",
-        "url": "http://akilhan.uz/",
-        "sameAs": ["https://www.linkedin.com/in/okiljon-dadakhanov/", "https://github.com/OkiljonDadakhanov/OkiljonDadakhonov"],
-        "description": "Okiljon Dadakhanov is a web application developer from Tashkent, Uzbekistan & gaining professional experience of transforming ideas into products.",
+        "name": "Okiljon Dadakhonov",
+        "jobTitle": "Junior Software Engineer (Backend · LLM)",
+        "url": "http://khwarizmi.uz/",
+        "sameAs": [
+          "https://www.linkedin.com/in/okiljon-dadakhanov/",
+          "https://github.com/OkiljonDadakhanov"
+        ],
+        "description": "Backend-first developer (Node.js/TS, Python/FastAPI) building Gradabroad.net and LLM-powered tools.",
         "email": "mailto:okiljondadakhonov@gmail.com",
         "alumniOf": {
           "@type": "CollegeOrUniversity",
@@ -57,23 +71,66 @@
           "addressCountry": "UZ"
         },
         "knowsAbout": [
-          "Frontend Development",
-          "Mobile Consulting",
+          "Backend Development",
+          "Node.js",
+          "TypeScript",
+          "FastAPI",
           "React",
-          "Next JS",
-          "React Native",
-          "Supabase",
-          "JavaScript",
-          "Xcode"
-        ],
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Freelancer"
-        },
-        "gender": "Male",
-        "nationality": "Uzbek"
+          "Next.js",
+          "LLM Integrations"
+        ]
       }
     </script>
+
+    <!-- Quick inline fixes for images & mobile nav -->
+    <style>
+      /* Prevent image squish; keep nice aspect */
+      .media-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 16px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #eef2ff, #f5f7ff);
+      }
+      .media-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transform: translateZ(0);
+      }
+
+      /* Button group wrap on small screens */
+      .button-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      /* Mobile nav (hamburger) */
+      aside {
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+      }
+      aside.active {
+        transform: translateX(0);
+      }
+      .layer {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.25s ease;
+      }
+      .layer.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      /* Small quality-of-life tweaks */
+      .text.title strong { font-weight: 700; }
+      .stack-chips { gap: 8px; flex-wrap: wrap; }
+      .stack-chips .text { white-space: nowrap; }
+    </style>
   </head>
 
   <body>
@@ -81,97 +138,76 @@
       <nav class="flex container h-full items-center justify-between">
         <ul class="main-nav flex justify-between items-center h-fitContent">
           <li class="nav-item">
-            <a class="text initial" title="Portfolio logo"
-              aria-label="Portfolio logo"
-              href="/">
-              <img alt="Portfolio logo" width="70" height="70"
-                src="https://ik.imagekit.io/imashish/portfolio/tr:f-auto/logo.png" />
+            <a class="text initial" title="Portfolio logo" aria-label="Portfolio logo" href="/">
+              <img
+                alt="Portfolio logo"
+                width="70"
+                height="70"
+                src="https://ik.imagekit.io/imashish/portfolio/tr:f-auto/logo.png"
+              />
             </a>
           </li>
           <li class="nav-item ham-btn">
-            <button aria-label="open navigation" id="hamburger">
+            <button aria-label="open navigation" id="hamburger" aria-expanded="false" aria-controls="mobile-nav">
               <div class="ham-box">
                 <div class="ham-box-inner"></div>
               </div>
             </button>
           </li>
         </ul>
+
         <ul class="desktop-nav">
-          <li class="work">
-            <a title="Okiljon Projects" aria-label="Okiljon Projects"
-              href="#work">Work</a>
-          </li>
-          <li class="experience">
-            <a title="Okiljon Work Experience"
-              aria-label="Okiljon Work Experience"
-              href="#experience">Experience</a>
-          </li>
-          <li class="education">
-            <a title="Okiljon Education"
-              aria-label="Okiljon Education"
-              href="#education">Education</a>
-          </li>
-          <li class="contact">
-            <a title="Okiljon Contact Info"
-              aria-label="Okiljon Contact Info" href="#contact">Contact</a>
-          </li>
+          <li class="work"><a title="Projects" aria-label="Projects" href="#work">Work</a></li>
+          <li class="experience"><a title="Experience" aria-label="Experience" href="#experience">Experience</a></li>
+          <li class="education"><a title="Education" aria-label="Education" href="#education">Education</a></li>
+          <li class="contact"><a title="Contact" aria-label="Contact" href="#contact">Contact</a></li>
         </ul>
 
-        <a href="/assets/Okiljon-resume.pdf" title="Downlaod CV"
+        <a
+          href="/assets/Okiljon-resume.pdf"
+          title="Download CV"
           aria-label="Download CV"
-          target="_blank" class="text button secondary">Download CV</a>
+          target="_blank"
+          class="text button secondary"
+          >Download CV</a
+        >
       </nav>
     </header>
 
     <!-- Mobile Navigation -->
-    <aside>
+    <aside id="mobile-nav" aria-hidden="true">
       <nav>
         <ul class="mobile-nav">
-          <li class="work">
-            <a title="Okiljon Projects" aria-label="Okiljon Projects"
-              href="#work">Work</a>
-          </li>
-          <li class="experience">
-            <a title="Okiljon Work Experience"
-              aria-label="Okiljon Work Experience"
-              href="#experience">Experience</a>
-          </li>
-          <li class="education">
-            <a title="Okiljon Education"
-              aria-label="Okiljon Education"
-              href="#education">Education</a>
-          </li>
-          <li class="contact">
-            <a title="Okiljon Contact Info"
-              aria-label="Okiljon Contact Info" href="#contact">Contact</a>
-          </li>
+          <li class="work"><a title="Projects" aria-label="Projects" href="#work">Work</a></li>
+          <li class="experience"><a title="Experience" aria-label="Experience" href="#experience">Experience</a></li>
+          <li class="education"><a title="Education" aria-label="Education" href="#education">Education</a></li>
+          <li class="contact"><a title="Contact" aria-label="Contact" href="#contact">Contact</a></li>
         </ul>
-        <a href="/assets/Okiljon-resume.pdf
-          title="Downlaod Okiljon CV" aria-label="Download Okiljon CV"
-          target="_blank" class="text button secondary">Download CV</a>
+        <a
+          href="/assets/Okiljon-resume.pdf"
+          title="Download Okiljon CV"
+          aria-label="Download Okiljon CV"
+          target="_blank"
+          class="text button secondary"
+          >Download CV</a
+        >
       </nav>
     </aside>
-    <div class="layer"></div>
+    <div class="layer" id="layer"></div>
 
     <div class="container">
       <!-- Personal Info -->
       <main data-aos="fade-up">
-        <p class="text salutation">👋🏽 there!</p>
+        <p class="text salutation">👋🏽 hi there!</p>
         <h3 class="text title">
           I'm Okiljon.<br />
-          I build web applications.
+          <strong>I build backend APIs and LLM-powered features.</strong>
         </h3>
         <p class="text bio">
-          I'm a visual learner and a self-taught developer with 1+ year of
-          professional
-          experience in turning ideas into products.<br /><br />
-          I primarily engage in front-end development using
-          <strong>React</strong>,
-          <strong>Next.js</strong>, &
-          <strong>Typescript</strong> and like to explore & learn different
-          things in my spare
-          time.
-
+          Junior software engineer with a backend-first focus
+          (<strong>Node.js/TypeScript, Python/FastAPI</strong>) and hands-on experience integrating
+          <strong>LLM APIs</strong>. I like owning problems end-to-end and shipping fast with clear
+          communication. Based in Tashkent.
         </p>
       </main>
 
@@ -179,247 +215,237 @@
         <!-- Recent Work -->
         <section id="work" class="flow-content">
           <h2 class="heading">Recent Work</h2>
+
+          <!-- Gradabroad.net — flagship -->
           <div class="recent-work flow-content" data-aos="fade-right">
-            <div class="bannerly">
-              <img alt="banner" class="banner"
+            <div class="media-frame">
+              <img
+                alt="Gradabroad.net University Admin Dashboard"
                 loading="lazy"
-                src="./assets/imgs/banner.png" />
+                src="./assets/imgs/gradabroad-cover.jpg"
+                srcset="./assets/imgs/gradabroad-cover.jpg 800w, ./assets/imgs/gradabroad-cover@2x.jpg 1600w"
+                sizes="(max-width: 800px) 100vw, 800px"
+              />
             </div>
             <div class="block-context flow-content">
               <h3 class="text title">
-                Bannerly:
-                <br />
-                Social Media Banner Generator
-
+                Gradabroad.net — University Profile Admin Platform
               </h3>
               <p class="text content">
-                Currently working on a non-AI web application that allows users to create customized social media banners. The platform is built using Next.js, React, and TypeScript, focusing on delivering a user-friendly interface and seamless design experience. </p>
-              <br />
+                Designed and developed the <strong>university profile management dashboard</strong>
+                that enables institutions to manage Programs, Scholarships, Gallery, and Campus
+                Information. Implemented <strong>token-based auth</strong>, protected routes, and
+                modular CRUD flows with <strong>Next.js + TypeScript</strong>, consuming multiple
+                REST APIs. Optimized UX/performance with the App Router and Tailwind CSS.
+              </p>
 
               <ul class="stack-chips">
-                <li class="text">React.js</li>
-                <li class="text">Next Js</li>
+                <li class="text">Next.js</li>
                 <li class="text">TypeScript</li>
                 <li class="text">Tailwind CSS</li>
-
+                <li class="text">REST API</li>
+                <li class="text">Auth</li>
               </ul>
 
               <div class="button-group">
-                <a href="https://github.com/OkiljonDadakhanov/bannerlash"
-                  target="_blank" class="text button"
-                  title="Source code for Shopping cart"
-                  aria-label="Source code for Shopping cart">Source
-                  Code</a>
+                <a
+                  href="https://gradabroad.net"
+                  target="_blank"
+                  class="text button secondary"
+                  title="Open gradabroad.net"
+                  aria-label="Open gradabroad.net"
+                  >Live Site</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Article Summarizer AI -->
+          <div class="recent-work flow-content recent-work--reverse" data-aos="fade-left">
+            <div class="media-frame">
+              <img
+                alt="AI Article Summarizer project"
+                loading="lazy"
+                src="./assets/imgs/sumz.jpg"
+                srcset="./assets/imgs/sumz.jpg 800w, ./assets/imgs/sumz@2x.jpg 1600w"
+                sizes="(max-width: 800px) 100vw, 800px"
+              />
+            </div>
+            <div class="block-context flow-content">
+              <h3 class="text title">Sumz — AI Article Summarizer</h3>
+              <p class="text content">
+                LLM-powered summarization micro-app with guarded prompts, retries/backoff, and
+                client-side history. Built with <strong>React + Vite</strong>, Tailwind CSS, and
+                <strong>RTK Query</strong>.
+              </p>
+
+              <ul class="stack-chips">
+                <li class="text">React</li>
+                <li class="text">Vite</li>
+                <li class="text">Tailwind CSS</li>
+                <li class="text">RTK Query</li>
+                <li class="text">LLM API</li>
+              </ul>
+
+              <div class="button-group">
+                <a
+                  href="https://summarizer-web-app.netlify.app/"
+                  target="_blank"
+                  title="Visit Sumz"
+                  aria-label="Visit Sumz"
+                  class="text button secondary"
+                  >View Demo</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- (Optional) Keep Bannerly but as WIP/tooling -->
+          <div class="recent-work flow-content" data-aos="fade-right">
+            <div class="media-frame">
+              <img
+                alt="Bannerly — Social media banner generator"
+                class="banner"
+                loading="lazy"
+                src="./assets/imgs/banner.png"
+                srcset="./assets/imgs/banner.png 800w, ./assets/imgs/banner@2x.png 1600w"
+                sizes="(max-width: 800px) 100vw, 800px"
+              />
+            </div>
+            <div class="block-context flow-content">
+              <h3 class="text title">Bannerly — Social Media Banner Generator</h3>
+              <p class="text content">
+                A simple tool to generate branded social banners using <strong>Next.js</strong> and
+                <strong>TypeScript</strong>. Focused on clean UI and fast iterations.
+              </p>
+
+              <ul class="stack-chips">
+                <li class="text">React</li>
+                <li class="text">Next.js</li>
+                <li class="text">TypeScript</li>
+                <li class="text">Tailwind CSS</li>
+              </ul>
+
+              <div class="button-group">
                 <a
                   href="https://bannerlash.vercel.app/"
                   target="_blank"
                   class="text button secondary"
-                  title="Try it live - online"
-                  aria-label="Try it live - online">View Demo</a>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="recent-work flow-content recent-work--reverse" data-aos="fade-left">
-            <div class="bannerly">
-              <img alt="banner" class="banner"
-                loading="lazy"
-                src="./assets/imgs/greenhaven.jpg" />
-            </div>
-            <div class="block-context flow-content">
-              <h3 class="text title">
-                GreenHaven:
-                <br />
-                Ecommerce App
-
-              </h3>
-              <p class="text content">
-                GreenHaven is a dedicated online e-commerce platform promoting eco-friendly and sustainable living by enabling users to buy and sell exclusively green products. This platform fosters an environmentally conscious marketplace while offering intuitive interfaces for both merchants and administrators.</p>
-              <br />
-
-              <ul class="stack-chips">
-                <li class="text">React.js</li>
-                <li class="text">Next Js</li>
-                <li class="text">TypeScript</li>
-                <li class="text">Tailwind CSS</li>
-                <li class="text">Figma</li>
-                <li class="text"> Swiper.js</li>
-                <li class="text">Mantine UI</li>
-
-              </ul>
-
-              <div class="button-group">
-                <a href="https://github.com/OkiljonDadakhanov/internship-uzinfocom"
-                  target="_blank" class="text button"
-                  title="Source code for Shopping cart"
-                  aria-label="Source code for Shopping cart">Source
-                  Code</a>
-                <a
-                  href="https://ghe-web.netlify.app/"
-                  target="_blank"
-                  class="text button secondary"
-                  title="Try it live - online"
-                  aria-label="Try it live - online">View Demo</a>
-              </div>
-            </div>
-          </div>
-
-
-          
-          <div class="recent-work flow-content" data-aos="fade-right">
-            <div class="sumz">
-              <img alt="Habitual Admin Portal by Okiljon "
-              class="habitual-portal-image sumz" loading="lazy"
-              src="./assets/imgs/sumz.jpg"
-              
-              />
-            </div>
-            
-            <div class="block-context flow-content">
-              <h3 class="text title">
-                Sumz <br />
-                Article summarizer
-              </h3>
-              <p class="text content">
-                Sumz is an innovative online platform designed to help users
-                summarize articles quickly and efficiently. Leveraging
-                cutting-edge AI technology, Sumz extracts the essence of lengthy
-                content, making it easy to grasp key ideas in seconds. Simply
-                insert the link to the article you'd like summarized, and let
-                Sumz do the rest.
-              </p>
-              <ul class="stack-chips">
-                <li class="text">React js</li>
-                <li class="text">Tailwind CSS</li>
-                <li class="text">OpenAI API</li>
-                <li class="text">RTK Query</li>
-              </ul>
-              <div class="button-group">
-                <a href="https://github.com/Akilhan/summarizer"
-                  target="_blank"
-                  title="Source code for Sumz"
-                  aria-label="Source code for Sumz"
-                  class="text button">Source Code</a>
-                <a href="https://summarizer-web-app.netlify.app/"
-                  target="_blank" title="Visit Sumz"
-                  aria-label="Visit Sumz"
-                  class="text button secondary">View Demo</a>
+                  title="Try Bannerly"
+                  aria-label="Try Bannerly"
+                  >View Demo</a
+                >
               </div>
             </div>
           </div>
         </section>
 
         <!-- Work Experience -->
-       <section id="experience" class="wc-section flow-content flex col" data-aos="fade-up" data-aos-anchor-placement="top-center">
-  <h2 class="heading">Work Experience</h2>
-
-  <div class="wc-list flow-content">
-    <div class="divider"></div>
-
-    <!-- Science Olympiad Center -->
-    <div class="wc flow-content">
-      <span class="text year">Jan 2025 – Present</span>
-      <div>
-        <div class="wc-info">
-          <span class="text year">Jan 2025 – Present</span>
-          <h3 class="text name">
-            Science Olympiad Center
-            <a href="#" title="Science Olympiad Center" aria-label="Science Olympiad Center" target="_blank" class="link">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </h3>
-          <span class="text role">Front-end Developer</span>
-        </div>
-        <ul class="wc-responsibilities">
-          <li class="text">- Designed, developed, and deployed Single Page Applications (SPAs) for national and international Science Olympiad events.</li>
-          <li class="text">- Built and maintained registration platforms for international participants using modern web technologies.</li>
-          <li class="text">- Collaborated with cross-functional teams to ensure mobile responsiveness, accessibility, and performance optimization.</li>
-        </ul>
-        <ul class="wc-projects">
-          <li class="text">🌐 <a href="https://arbicho.uz" target="_blank" class="link">arbicho.uz</a> — Abu Rayhan Biruni Chemistry Olympiad</li>
-          <li class="text">🌐 <a href="https://icho2026.uz" target="_blank" class="link">icho2026.uz</a> — International Chemistry Olympiad 2026 website</li>
-          <li class="text">🌐 <a href="https://khimio.uz" target="_blank" class="link">khimio.uz</a> — International Mathematics and Informatics Olympiad</li>
-        </ul>
-        <div class="active-circle present"></div>
-      </div>
-    </div>
-    <div class="line"></div>
-
-    <!-- Uzinfocom -->
-    <div class="wc flow-content">
-      <span class="text year">June 2024 – Sep 2024</span>
-      <div>
-        <div class="wc-info">
-          <span class="text year">June 2024 – Sep 2024</span>
-          <h3 class="text name">
-            Uzinfocom
-            <a href="https://uzinfocom.uz/" title="Uzinfocom" aria-label="Uzinfocom" target="_blank" class="link">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </h3>
-          <span class="text role">Front end developer intern</span>
-        </div>
-        <ul class="wc-responsibilities">
-          <li class="text">- Optimized the load time of the marketplace platform, improving the user experience within the first 3 months.</li>
-          <li class="text">- Implemented a new responsive design for the merchant interface, increasing mobile user engagement.</li>
-          <li class="text">- Developed reusable components using TypeScript and React.js, which reduced development time by 20% and facilitated easier maintenance and scalability of the codebase.</li>
-          <li class="text">- Improved my command of TypeScript and Next.js with the help of mentors by developing an e-commerce platform.</li>
-        </ul>
-        <div class="active-circle present"></div>
-      </div>
-    </div>
-    <div class="line"></div>
-
-    <!-- Itransition Group -->
-    <div class="wc flow-content">
-      <span class="text year">Jan 2023 – Mar 2023</span>
-      <div>
-        <div class="wc-info">
-          <span class="text year">Jan 2023 – Mar 2023</span>
-          <h3 class="text name">
-            Itransition Group
-            <a href="https://www.itransition.com/" title="Itransition Group" aria-label="Itransition Group" target="_blank" class="link">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-          </h3>
-          <span class="text role">Javascript Developer intern</span>
-        </div>
-        <ul class="wc-responsibilities">
-          <li class="text">Started professional journey in web development with Itransition Group, gaining expertise in frontend technologies and contributing to impactful projects while learning it.</li>
-          <li class="text"><b>🌟 Key Achievements:</b></li>
-          <li class="text">- Assisted in software design and development tasks.</li>
-          <li class="text">- Developed reusable boilerplates to reduce initial project setup time by 70%.</li>
-          <li class="text">- Explored educational resources and video materials independently.</li>
-          <li class="text">- Attended lectures and practical sessions to learn core concepts.</li>
-          <li class="text">- Built a complete web application using React, Redux, Material UI, Node.js, Express, and MongoDB.</li>
-        </ul>
-        <div class="active-circle"></div>
-      </div>
-    </div>
-    <div class="line"></div>
-
-  </div>
-</section>
-
-
-        <!-- Education Experience -->
-
-        <section id="education" class="wc-section flow-content flex col" data-aos="zoom-in-up">
-          <h2 class="heading">Education</h2>
+        <section
+          id="experience"
+          class="wc-section flow-content flex col"
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-center"
+        >
+          <h2 class="heading">Work Experience</h2>
 
           <div class="wc-list flow-content">
             <div class="divider"></div>
+
+            <!-- Science Olympiad Center -->
             <div class="wc flow-content">
-              <span class="text year">Oct 2021 - May 2025</span>
+              <span class="text year">Jan 2025 – Present</span>
               <div>
                 <div class="wc-info">
-                  <span class="text year">Oct 2021 - Nov 2025</span>
+                  <span class="text year">Jan 2025 – Present</span>
+                  <h3 class="text name">
+                    Science Olympiad Center
+                    <a href="https://arbicho.uz" title="Science Olympiad Center" aria-label="Science Olympiad Center" target="_blank" class="link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </h3>
+                  <span class="text role">Front-end Developer</span>
+                </div>
+                <ul class="wc-responsibilities">
+                  <li class="text">Designed, developed, and deployed SPAs for national and international Science Olympiad events.</li>
+                  <li class="text">Built and maintained registration platforms for international participants using modern web technologies.</li>
+                  <li class="text">Ensured mobile responsiveness, accessibility, and performance optimization.</li>
+                </ul>
+                <ul class="wc-projects">
+                  <li class="text">🌐 <a href="https://arbicho.uz" target="_blank" class="link">arbicho.uz</a></li>
+                  <li class="text">🌐 <a href="https://icho2026.uz" target="_blank" class="link">icho2026.uz</a></li>
+                  <li class="text">🌐 <a href="https://khimio.uz" target="_blank" class="link">khimio.uz</a></li>
+                </ul>
+                <div class="active-circle present"></div>
+              </div>
+            </div>
+            <div class="line"></div>
+
+            <!-- Uzinfocom -->
+            <div class="wc flow-content">
+              <span class="text year">June 2024 – Sep 2024</span>
+              <div>
+                <div class="wc-info">
+                  <span class="text year">June 2024 – Sep 2024</span>
+                  <h3 class="text name">
+                    Uzinfocom
+                    <a href="https://uzinfocom.uz/" title="Uzinfocom" aria-label="Uzinfocom" target="_blank" class="link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </h3>
+                  <span class="text role">Front-end Developer Intern</span>
+                </div>
+                <ul class="wc-responsibilities">
+                  <li class="text">Optimized marketplace load times, improving user experience.</li>
+                  <li class="text">Implemented responsive merchant UI for better mobile engagement.</li>
+                  <li class="text">Built reusable TypeScript + React components to speed up development.</li>
+                </ul>
+                <div class="active-circle present"></div>
+              </div>
+            </div>
+            <div class="line"></div>
+
+            <!-- Itransition Group -->
+            <div class="wc flow-content">
+              <span class="text year">Jan 2023 – Mar 2023</span>
+              <div>
+                <div class="wc-info">
+                  <span class="text year">Jan 2023 – Mar 2023</span>
+                  <h3 class="text name">
+                    Itransition Group
+                    <a href="https://www.itransition.com/" title="Itransition Group" aria-label="Itransition Group" target="_blank" class="link">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </h3>
+                  <span class="text role">JavaScript Developer Intern</span>
+                </div>
+                <ul class="wc-responsibilities">
+                  <li class="text">Assisted in software design and development tasks, building full-stack training projects.</li>
+                  <li class="text">Developed boilerplates and practiced PR reviews and incremental delivery.</li>
+                  <li class="text">Built a complete app with React, Redux, Material UI, Node.js, Express, and MongoDB.</li>
+                </ul>
+                <div class="active-circle"></div>
+              </div>
+            </div>
+            <div class="line"></div>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="wc-section flow-content flex col" data-aos="zoom-in-up">
+          <h2 class="heading">Education</h2>
+          <div class="wc-list flow-content">
+            <div class="divider"></div>
+            <div class="wc flow-content">
+              <span class="text year">Oct 2021 – May 2025</span>
+              <div>
+                <div class="wc-info">
+                  <span class="text year">Oct 2021 – May 2025</span>
                   <h3 class="text name">New Uzbekistan University</h3>
-                  <span class="text role">Software engineering</span>
+                  <span class="text role">B.S. Software Engineering</span>
                   <ul class="wc-responsibilities">
                     <li class="text">
-                     <b>Related Coursework:</b>  Data Structures and Algorithms (C++), Database Systems, OOP, Linear Algebra,
+                      <b>Relevant Coursework:</b> Data Structures & Algorithms (C++), Database Systems, OOP, Linear Algebra,
                       Numerical Methods, Calculus, Operating Systems, Computer Networks, Theory of Computation, AI/ML.
                     </li>
                   </ul>
@@ -430,15 +456,15 @@
 
             <div class="line"></div>
             <div class="wc flow-content">
-              <span class="text year">Sep 2023 - Nov 2023</span>
+              <span class="text year">Sep 2023 – Nov 2023</span>
               <div>
                 <div class="wc-info">
-                  <span class="text year">Sep 2023 - Nov 2023</span>
+                  <span class="text year">Sep 2023 – Nov 2023</span>
                   <h3 class="text name">Najot ta'lim</h3>
-                  <span class="text role">Front end development</span>
+                  <span class="text role">Front-end Development</span>
                   <ul class="wc-responsibilities">
                     <li class="text">
-                     <b>Related Coursework:</b> HTML5, CSS3, SASS, TailwindCSS, JavaScript, AJAX, React.js, TypeScript.
+                      <b>Coursework:</b> HTML5, CSS3, SASS, TailwindCSS, JavaScript, AJAX, React.js, TypeScript.
                     </li>
                   </ul>
                 </div>
@@ -446,7 +472,6 @@
               </div>
             </div>
             <div class="line"></div>
-            
           </div>
         </section>
 
@@ -454,74 +479,95 @@
         <section id="contact" class="contact-section flow-content" data-aos="fade-up-right">
           <h2 class="heading">Contact</h2>
           <p class="contact">
-            Get in touch or shoot me an email directly on
-            <a class="external-link"
-              title="Shoot an email to Okiljon on okiljondadakhonov@gmail.com"
-              aria-label="Shoot an email to Okiljon on okiljondadakhonov@gmail.com"
-              href="mailto:okiljondadakhonov@gmail.com">okiljondadakhonov@gmail.com</a>
+            Get in touch or shoot me an email:
+            <a
+              class="external-link"
+              title="Email Okiljon"
+              aria-label="Email Okiljon"
+              href="mailto:okiljondadakhonov@gmail.com"
+              >okiljondadakhonov@gmail.com</a
+            >
           </p>
           <div class="line"></div>
           <div class="contact-meta flex justify-between items-center">
             <ul class="social-list">
-              
               <li>
-                <a class="flex touch" target="_blank"
-                  title="Okiljon on linkedin"
-                  aria-label="Okiljon on linkedin"
-                  href="https://www.linkedin.com/in/okiljon-dadakhanov/">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M18.5195 0H1.47656C0.660156 0 0 0.644531 0 1.44141V18.5547C0 19.3516 0.660156 20 1.47656 20H18.5195C19.3359 20 20 19.3516 20 18.5586V1.44141C20 0.644531 19.3359 0 18.5195 0ZM5.93359 17.043H2.96484V7.49609H5.93359V17.043ZM4.44922 6.19531C3.49609 6.19531 2.72656 5.42578 2.72656 4.47656C2.72656 3.52734 3.49609 2.75781 4.44922 2.75781C5.39844 2.75781 6.16797 3.52734 6.16797 4.47656C6.16797 5.42188 5.39844 6.19531 4.44922 6.19531ZM17.043 17.043H14.0781V12.4023C14.0781 11.2969 14.0586 9.87109 12.5352 9.87109C10.9922 9.87109 10.7578 11.0781 10.7578 12.3242V17.043H7.79688V7.49609H10.6406V8.80078H10.6797C11.0742 8.05078 12.043 7.25781 13.4844 7.25781C16.4883 7.25781 17.043 9.23438 17.043 11.8047V17.043Z"
-                      fill="black" />
-                  </svg>
-                </a>
+                <a
+                  class="flex touch"
+                  target="_blank"
+                  title="LinkedIn"
+                  aria-label="LinkedIn"
+                  href="https://www.linkedin.com/in/okiljon-dadakhanov/"
+                  >LinkedIn</a
+                >
               </li>
               <li>
-                <a class="flex touch" title="Okiljon on github"
-                  aria-label="Okiljon on github" target="_blank"
-                  href="https://github.com/OkiljonDadakhanov/OkiljonDadakhonov">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M9.99669 0.301758C7.62266 0.30299 5.32647 1.14383 3.51871 2.67392C1.71095 4.20401 0.509501 6.32358 0.129193 8.65362C-0.251115 10.9837 0.214513 13.3722 1.44283 15.3923C2.67114 17.4123 4.58204 18.932 6.83384 19.6797C7.33062 19.7719 7.51774 19.464 7.51774 19.2022C7.51774 18.9404 7.5078 18.1814 7.50449 17.3515C4.72251 17.9525 4.13465 16.1775 4.13465 16.1775C3.68093 15.025 3.02517 14.722 3.02517 14.722C2.11772 14.1062 3.09307 14.1177 3.09307 14.1177C4.09823 14.1885 4.62647 15.1435 4.62647 15.1435C5.51737 16.6633 6.96631 16.2236 7.53596 15.9668C7.62538 15.323 7.88536 14.885 8.17184 14.6364C5.94957 14.3861 3.61469 13.5332 3.61469 9.72316C3.60091 8.73505 3.96968 7.77948 4.64469 7.05415C4.54202 6.80388 4.19923 5.79291 4.74238 4.41971C4.74238 4.41971 5.58195 4.15298 7.49291 5.43891C9.13201 4.99322 10.8614 4.99322 12.5005 5.43891C14.4098 4.15298 15.2477 4.41971 15.2477 4.41971C15.7925 5.78962 15.4497 6.80059 15.347 7.05415C16.0242 7.77959 16.3937 8.73683 16.3787 9.72646C16.3787 13.5447 14.0388 14.3861 11.8133 14.6315C12.1709 14.941 12.4905 15.5453 12.4905 16.4739C12.4905 17.8043 12.4789 18.8745 12.4789 19.2022C12.4789 19.4673 12.6594 19.7768 13.1662 19.6797C15.4182 18.9319 17.3293 17.4119 18.5576 15.3916C19.7859 13.3712 20.2513 10.9823 19.8705 8.652C19.4898 6.32174 18.2878 4.20214 16.4794 2.67232C14.671 1.14249 12.3743 0.302209 10 0.301758H9.99669Z"
-                      fill="black" />
-                  </svg>
-                </a>
+                <a
+                  class="flex touch"
+                  title="GitHub"
+                  aria-label="GitHub"
+                  target="_blank"
+                  href="https://github.com/OkiljonDadakhanov"
+                  >GitHub</a
+                >
               </li>
               <li>
-                <a class="flex touch" title="Okiljon on X"
-                  aria-label="Okiljon on X" target="_blank"
-                  href="https://x.com/Akilkhan_d">
-                  <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M6.2918 17.1251C13.8371 17.1251 17.9652 10.8724 17.9652 5.45167C17.9652 5.27589 17.9613 5.0962 17.9535 4.92042C18.7566 4.33967 19.4496 3.62033 20 2.7962C19.2521 3.12896 18.458 3.34627 17.6449 3.44074C18.5011 2.92755 19.1421 2.12135 19.4492 1.17159C18.6438 1.64892 17.763 1.98563 16.8445 2.1673C16.2257 1.50976 15.4075 1.07439 14.5164 0.928498C13.6253 0.78261 12.711 0.934331 11.9148 1.3602C11.1186 1.78607 10.4848 2.46238 10.1115 3.28455C9.73825 4.10672 9.64619 5.02897 9.84961 5.9087C8.21874 5.82686 6.62328 5.40321 5.16665 4.6652C3.71002 3.9272 2.42474 2.89132 1.39414 1.62472C0.870333 2.52782 0.710047 3.59649 0.945859 4.61353C1.18167 5.63057 1.79589 6.51966 2.66367 7.10011C2.01219 7.07943 1.37498 6.90402 0.804688 6.58839V6.63917C0.804104 7.58691 1.13175 8.50561 1.73192 9.2391C2.3321 9.97258 3.16777 10.4756 4.09687 10.6626C3.49338 10.8277 2.85999 10.8518 2.2457 10.7329C2.50788 11.548 3.01798 12.2609 3.70481 12.7721C4.39164 13.2833 5.22093 13.5673 6.07695 13.5845C4.62369 14.726 2.82848 15.3452 0.980469 15.3423C0.652739 15.3418 0.325333 15.3217 0 15.2821C1.87738 16.4866 4.06128 17.1263 6.2918 17.1251Z"
-                      fill="black" />
-                  </svg>
-                </a>
+                <a
+                  class="flex touch"
+                  title="X (Twitter)"
+                  aria-label="X (Twitter)"
+                  target="_blank"
+                  href="https://x.com/Akilkhan_d"
+                  >X</a
+                >
               </li>
             </ul>
-            <span class="text meta-text">Design & Developed by
-              <a href="https://www.linkedin.com/in/okiljon-dadakhanov/"
-                title="Connect with Okiljon Dadakhanov on Linkedin" target="_blank"
-                class="external-link">Okiljon Dadakhanov</a></span>
+            <span class="text meta-text"
+              >Design & Developed by
+              <a
+                href="https://www.linkedin.com/in/okiljon-dadakhanov/"
+                title="Connect with Okiljon on LinkedIn"
+                target="_blank"
+                class="external-link"
+                >Okiljon Dadakhonov</a
+              ></span
+            >
           </div>
         </section>
       </div>
     </div>
 
-    <script src="main.js"></script>
+    <!-- (Optional) your original JS; hamburger fixed below anyway -->
+    <!-- <script src="main.js"></script> -->
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
     <script>
       AOS.init();
+
+      // Hamburger: open/close mobile nav
+      const hamburger = document.getElementById("hamburger");
+      const aside = document.getElementById("mobile-nav");
+      const layer = document.getElementById("layer");
+      const mobileLinks = Array.from(document.querySelectorAll(".mobile-nav a"));
+
+      function toggleMenu(forceState) {
+        const isOpen = forceState !== undefined ? forceState : !aside.classList.contains("active");
+        aside.classList.toggle("active", isOpen);
+        layer.classList.toggle("active", isOpen);
+        aside.setAttribute("aria-hidden", String(!isOpen));
+        hamburger.setAttribute("aria-expanded", String(isOpen));
+        document.body.style.overflow = isOpen ? "hidden" : "";
+      }
+
+      hamburger.addEventListener("click", () => toggleMenu());
+      layer.addEventListener("click", () => toggleMenu(false));
+      mobileLinks.forEach((a) => a.addEventListener("click", () => toggleMenu(false)));
+
+      // Close on Escape
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") toggleMenu(false);
+      });
     </script>
-    
   </body>
-
 </html>
-
-
+```

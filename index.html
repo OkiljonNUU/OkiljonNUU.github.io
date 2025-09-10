@@ -1,4 +1,3 @@
-```
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,17 +12,17 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.ico" />
 
-    <title>Okiljon Dadakhonov — Junior Software Engineer (Backend · LLM)</title>
+    <title>Okiljon Dadakhonov — Frontend (React · Next.js · TS) | Learning Express</title>
     <meta
       name="description"
-      content="Okiljon Dadakhonov — Junior software engineer focused on backend (Node.js/TypeScript, Python/FastAPI) and LLM-powered features. Builder of Gradabroad.net university admin platform."
+      content="Okiljon Dadakhonov — Frontend developer (React, Next.js, TypeScript). Building Gradabroad.net and learning backend with Express.js by shipping real projects."
     />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Okiljon Dadakhonov — Junior Software Engineer (Backend · LLM)" />
+    <meta property="og:title" content="Okiljon Dadakhonov — Frontend (React · Next.js · TS)" />
     <meta
       property="og:description"
-      content="Backend-first developer (Node.js/TypeScript, Python/FastAPI) with real projects: Gradabroad.net university admin platform and an AI article summarizer."
+      content="Frontend-first dev (React, Next.js, TypeScript). Learning backend with Express while building real apps like Gradabroad.net."
     />
     <meta
       property="og:image"
@@ -51,18 +50,15 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Okiljon Dadakhonov",
-        "jobTitle": "Junior Software Engineer (Backend · LLM)",
-        "url": "http://khwarizmi.uz/",
+        "jobTitle": "Frontend Developer (React · Next.js · TypeScript)",
+        "url": "http://akilhan.uz/",
         "sameAs": [
           "https://www.linkedin.com/in/okiljon-dadakhanov/",
           "https://github.com/OkiljonDadakhanov"
         ],
-        "description": "Backend-first developer (Node.js/TS, Python/FastAPI) building Gradabroad.net and LLM-powered tools.",
+        "description": "Frontend-first developer, learning backend with Express while building Gradabroad.net and AI tools.",
         "email": "mailto:okiljondadakhonov@gmail.com",
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "New Uzbekistan University"
-        },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "New Uzbekistan University" },
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Tashkent",
@@ -71,20 +67,44 @@
           "addressCountry": "UZ"
         },
         "knowsAbout": [
-          "Backend Development",
-          "Node.js",
-          "TypeScript",
-          "FastAPI",
           "React",
           "Next.js",
+          "TypeScript",
+          "Express",
+          "Tailwind CSS",
+          "REST APIs",
           "LLM Integrations"
         ]
       }
     </script>
 
-    <!-- Quick inline fixes for images & mobile nav -->
+    <!-- Robust inline overrides for images & mobile nav -->
     <style>
-      /* Prevent image squish; keep nice aspect */
+      /* ===== Image layout (prevents desktop from hiding/squishing) ===== */
+      .recent-work {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        align-items: start;
+      }
+      @media (min-width: 900px) {
+        .recent-work {
+          grid-template-columns: 1fr 1fr;
+        }
+        .recent-work--reverse {
+          grid-template-columns: 1fr 1fr;
+        }
+        .recent-work--reverse .media-col {
+          order: 2;
+        }
+        .recent-work--reverse .content-col {
+          order: 1;
+        }
+      }
+
+      .media-col { min-width: 0; }
+      .content-col { min-width: 0; }
+
       .media-frame {
         position: relative;
         width: 100%;
@@ -92,43 +112,67 @@
         border-radius: 16px;
         overflow: hidden;
         background: linear-gradient(135deg, #eef2ff, #f5f7ff);
+        display: block !important; /* override any accidental display:none */
+      }
+      .media-frame img,
+      .media-frame picture,
+      .media-frame source {
+        display: block !important;
       }
       .media-frame img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        transform: translateZ(0);
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
       }
 
-      /* Button group wrap on small screens */
-      .button-group {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
+      /* guard against legacy .banner rules in your CSS */
+      .banner, .sumz, .bannerly, .habitual-portal-image {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
       }
 
-      /* Mobile nav (hamburger) */
-      aside {
+      /* ===== Mobile nav (off-canvas) ===== */
+      aside#mobile-nav {
+        position: fixed;
+        top: 0; right: 0;
+        width: min(85vw, 320px);
+        height: 100vh;
+        background: #fff;
+        box-shadow: -8px 0 24px rgba(0,0,0,0.12);
         transform: translateX(100%);
         transition: transform 0.3s ease;
+        z-index: 1001;
+        padding: 20px 16px;
       }
-      aside.active {
+      aside#mobile-nav.active {
         transform: translateX(0);
       }
       .layer {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.35);
         opacity: 0;
         visibility: hidden;
         transition: all 0.25s ease;
+        z-index: 1000;
       }
       .layer.active {
         opacity: 1;
         visibility: visible;
       }
+      .ham-btn button#hamburger {
+        cursor: pointer;
+      }
 
-      /* Small quality-of-life tweaks */
-      .text.title strong { font-weight: 700; }
-      .stack-chips { gap: 8px; flex-wrap: wrap; }
+      /* Buttons wrap nicely on small screens */
+      .button-group {
+        display: flex; flex-wrap: wrap; gap: 10px;
+      }
+
+      /* Bio emphasis */
+      .text.title strong { font-weight: 800; }
+      .stack-chips { gap: 8px; display:flex; flex-wrap:wrap; }
       .stack-chips .text { white-space: nowrap; }
     </style>
   </head>
@@ -201,13 +245,12 @@
         <p class="text salutation">👋🏽 hi there!</p>
         <h3 class="text title">
           I'm Okiljon.<br />
-          <strong>I build backend APIs and LLM-powered features.</strong>
+          <strong>Frontend developer (React, Next.js, TypeScript) — learning Express.js by building projects.</strong>
         </h3>
         <p class="text bio">
-          Junior software engineer with a backend-first focus
-          (<strong>Node.js/TypeScript, Python/FastAPI</strong>) and hands-on experience integrating
-          <strong>LLM APIs</strong>. I like owning problems end-to-end and shipping fast with clear
-          communication. Based in Tashkent.
+          I design and ship modern web apps with <b>React</b>, <b>Next.js</b>, and <b>TypeScript</b>.
+          On the backend side, I'm actively <b>learning Express.js</b> and integrating REST APIs while
+          building real features. Based in Tashkent.
         </p>
       </main>
 
@@ -218,25 +261,25 @@
 
           <!-- Gradabroad.net — flagship -->
           <div class="recent-work flow-content" data-aos="fade-right">
-            <div class="media-frame">
-              <img
-                alt="Gradabroad.net University Admin Dashboard"
-                loading="lazy"
-                src="./assets/imgs/gradabroad-cover.jpg"
-                srcset="./assets/imgs/gradabroad-cover.jpg 800w, ./assets/imgs/gradabroad-cover@2x.jpg 1600w"
-                sizes="(max-width: 800px) 100vw, 800px"
-              />
+            <div class="media-col">
+              <div class="media-frame">
+                <img
+                  alt="Gradabroad.net University Admin Dashboard"
+                  loading="lazy"
+                  src="./assets/imgs/gradabroad-cover.jpg"
+                  srcset="./assets/imgs/gradabroad-cover.jpg 800w, ./assets/imgs/gradabroad-cover@2x.jpg 1600w"
+                  sizes="(max-width: 900px) 100vw, 50vw"
+                />
+              </div>
             </div>
-            <div class="block-context flow-content">
+            <div class="content-col block-context flow-content">
               <h3 class="text title">
                 Gradabroad.net — University Profile Admin Platform
               </h3>
               <p class="text content">
-                Designed and developed the <strong>university profile management dashboard</strong>
-                that enables institutions to manage Programs, Scholarships, Gallery, and Campus
-                Information. Implemented <strong>token-based auth</strong>, protected routes, and
-                modular CRUD flows with <strong>Next.js + TypeScript</strong>, consuming multiple
-                REST APIs. Optimized UX/performance with the App Router and Tailwind CSS.
+                University-facing dashboard to manage <strong>Programs</strong>, <strong>Scholarships</strong>,
+                <strong>Gallery</strong>, and <strong>Campus Information</strong>. Built with
+                <strong>Next.js + TypeScript</strong>, protected routes, and modular CRUD flows, consuming multiple REST APIs.
               </p>
 
               <ul class="stack-chips">
@@ -261,22 +304,23 @@
           </div>
 
           <!-- Article Summarizer AI -->
-          <div class="recent-work flow-content recent-work--reverse" data-aos="fade-left">
-            <div class="media-frame">
-              <img
-                alt="AI Article Summarizer project"
-                loading="lazy"
-                src="./assets/imgs/sumz.jpg"
-                srcset="./assets/imgs/sumz.jpg 800w, ./assets/imgs/sumz@2x.jpg 1600w"
-                sizes="(max-width: 800px) 100vw, 800px"
-              />
+          <div class="recent-work recent-work--reverse flow-content" data-aos="fade-left">
+            <div class="media-col">
+              <div class="media-frame">
+                <img
+                  alt="AI Article Summarizer project"
+                  loading="lazy"
+                  src="./assets/imgs/sumz.jpg"
+                  srcset="./assets/imgs/sumz.jpg 800w, ./assets/imgs/sumz@2x.jpg 1600w"
+                  sizes="(max-width: 900px) 100vw, 50vw"
+                />
+              </div>
             </div>
-            <div class="block-context flow-content">
+            <div class="content-col block-context flow-content">
               <h3 class="text title">Sumz — AI Article Summarizer</h3>
               <p class="text content">
-                LLM-powered summarization micro-app with guarded prompts, retries/backoff, and
-                client-side history. Built with <strong>React + Vite</strong>, Tailwind CSS, and
-                <strong>RTK Query</strong>.
+                Lightweight summarization app with guarded prompts, retries/backoff, and local history.
+                Built with <strong>React + Vite</strong>, Tailwind CSS, and <strong>RTK Query</strong>.
               </p>
 
               <ul class="stack-chips">
@@ -300,19 +344,21 @@
             </div>
           </div>
 
-          <!-- (Optional) Keep Bannerly but as WIP/tooling -->
+          <!-- Optional: Bannerly -->
           <div class="recent-work flow-content" data-aos="fade-right">
-            <div class="media-frame">
-              <img
-                alt="Bannerly — Social media banner generator"
-                class="banner"
-                loading="lazy"
-                src="./assets/imgs/banner.png"
-                srcset="./assets/imgs/banner.png 800w, ./assets/imgs/banner@2x.png 1600w"
-                sizes="(max-width: 800px) 100vw, 800px"
-              />
+            <div class="media-col">
+              <div class="media-frame">
+                <img
+                  alt="Bannerly — Social media banner generator"
+                  class="banner"
+                  loading="lazy"
+                  src="./assets/imgs/banner.png"
+                  srcset="./assets/imgs/banner.png 800w, ./assets/imgs/banner@2x.png 1600w"
+                  sizes="(max-width: 900px) 100vw, 50vw"
+                />
+              </div>
             </div>
-            <div class="block-context flow-content">
+            <div class="content-col block-context flow-content">
               <h3 class="text title">Bannerly — Social Media Banner Generator</h3>
               <p class="text content">
                 A simple tool to generate branded social banners using <strong>Next.js</strong> and
@@ -491,83 +537,42 @@
           <div class="line"></div>
           <div class="contact-meta flex justify-between items-center">
             <ul class="social-list">
-              <li>
-                <a
-                  class="flex touch"
-                  target="_blank"
-                  title="LinkedIn"
-                  aria-label="LinkedIn"
-                  href="https://www.linkedin.com/in/okiljon-dadakhanov/"
-                  >LinkedIn</a
-                >
-              </li>
-              <li>
-                <a
-                  class="flex touch"
-                  title="GitHub"
-                  aria-label="GitHub"
-                  target="_blank"
-                  href="https://github.com/OkiljonDadakhanov"
-                  >GitHub</a
-                >
-              </li>
-              <li>
-                <a
-                  class="flex touch"
-                  title="X (Twitter)"
-                  aria-label="X (Twitter)"
-                  target="_blank"
-                  href="https://x.com/Akilkhan_d"
-                  >X</a
-                >
-              </li>
+              <li><a class="flex touch" target="_blank" title="LinkedIn" aria-label="LinkedIn" href="https://www.linkedin.com/in/okiljon-dadakhanov/">LinkedIn</a></li>
+              <li><a class="flex touch" title="GitHub" aria-label="GitHub" target="_blank" href="https://github.com/OkiljonDadakhanov">GitHub</a></li>
+              <li><a class="flex touch" title="X (Twitter)" aria-label="X (Twitter)" target="_blank" href="https://x.com/Akilkhan_d">X</a></li>
             </ul>
-            <span class="text meta-text"
-              >Design & Developed by
-              <a
-                href="https://www.linkedin.com/in/okiljon-dadakhanov/"
-                title="Connect with Okiljon on LinkedIn"
-                target="_blank"
-                class="external-link"
-                >Okiljon Dadakhonov</a
-              ></span
-            >
+            <span class="text meta-text">Design & Developed by
+              <a href="https://www.linkedin.com/in/okiljon-dadakhanov/" title="Connect with Okiljon on LinkedIn" target="_blank" class="external-link">Okiljon Dadakhonov</a></span>
           </div>
         </section>
       </div>
     </div>
 
-    <!-- (Optional) your original JS; hamburger fixed below anyway -->
-    <!-- <script src="main.js"></script> -->
-
+    <!-- Your JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
 
-      // Hamburger: open/close mobile nav
+      // Hamburger: open/close mobile nav (with robust state & focus trap-lite)
       const hamburger = document.getElementById("hamburger");
       const aside = document.getElementById("mobile-nav");
       const layer = document.getElementById("layer");
       const mobileLinks = Array.from(document.querySelectorAll(".mobile-nav a"));
 
       function toggleMenu(forceState) {
-        const isOpen = forceState !== undefined ? forceState : !aside.classList.contains("active");
-        aside.classList.toggle("active", isOpen);
-        layer.classList.toggle("active", isOpen);
-        aside.setAttribute("aria-hidden", String(!isOpen));
-        hamburger.setAttribute("aria-expanded", String(isOpen));
-        document.body.style.overflow = isOpen ? "hidden" : "";
+        const willOpen = forceState !== undefined ? forceState : !aside.classList.contains("active");
+        aside.classList.toggle("active", willOpen);
+        layer.classList.toggle("active", willOpen);
+        aside.setAttribute("aria-hidden", String(!willOpen));
+        hamburger.setAttribute("aria-expanded", String(willOpen));
+        document.body.style.overflow = willOpen ? "hidden" : "";
+        if (willOpen) aside.querySelector("a")?.focus();
       }
 
-      hamburger.addEventListener("click", () => toggleMenu());
-      layer.addEventListener("click", () => toggleMenu(false));
+      hamburger?.addEventListener("click", () => toggleMenu());
+      layer?.addEventListener("click", () => toggleMenu(false));
       mobileLinks.forEach((a) => a.addEventListener("click", () => toggleMenu(false)));
-
-      // Close on Escape
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") toggleMenu(false);
-      });
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape") toggleMenu(false); });
     </script>
   </body>
 </html>
-```
